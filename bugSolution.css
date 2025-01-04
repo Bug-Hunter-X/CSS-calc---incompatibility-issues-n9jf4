@@ -1,0 +1,9 @@
+To avoid issues, ensure that you use compatible units within the `calc()` function.  If mixing percentages and pixels is necessary, use a consistent baseline unit for calculation. For example, converting pixel values to percentages based on the parent element's size or using viewport units (`vw`, `vh`) can help make calculations consistent. Here's an example using viewports units to achieve a similar result:
+
+```css
+/* bugSolution.css */
+#myElement {
+  width: calc(50vw + 10vw); /* Using vw units for consistency */
+}
+```
+Alternatively, you can use JavaScript to dynamically adjust element sizes based on parent sizes if percentage-based calculations are crucial.
